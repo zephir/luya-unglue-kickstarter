@@ -6,29 +6,14 @@
     "require": {
         "luyadev/luya-core" : "~1.0.0",
         "luyadev/luya-module-admin" : "~1.2.0",
-        "luyadev/luya-module-cms" : "~1.0.0"
+        "luyadev/luya-module-cms" : "~1.0.0",
+        "unglue/client" : "^1.0",
+        "zephir/frontend-resources": "^1.0"
     },
     "require-dev": {
+        "luyadev/luya-deployer" : "~1.0.0",
         "yiisoft/yii2-gii" : "~2.0.0",
-        "yiisoft/yii2-debug" : "~2.0.0",
-        "unglue/client" : "^1.0",
-        "zephir/frontend-resources": "dev-master"
-    },
-    "scripts": {
-        "post-create-project-cmd": [
-            "yii\\composer\\Installer::postCreateProject"
-        ]
-    },
-    "extra": {
-        "yii\\composer\\Installer::postCreateProject": {
-            "setPermission": [
-                {
-                    "public_html/assets": "0777",
-                    "public_html/storage": "0777",
-                    "runtime" : "0777"
-                }
-            ]
-		}
+        "yiisoft/yii2-debug" : "~2.0.0"
     },
     "config": {
         "fxp-asset" : {
