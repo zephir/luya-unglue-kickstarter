@@ -1,0 +1,43 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+nav .btn {
+    list-style: none;
+}
+
+nav .btn a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-item.active>.nav-link {
+    color: #A50045 !important;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #A50045;
+}
+
+.footer .container ul {
+    margin:0; padding:20px 0; color:white; list-style-type:none;
+}
+
+.footer .container ul li {
+    display:inline-block; padding-right:25px;
+}
+
+.footer  a {
+    color: #ffffff;
+    text-decoration:underline;
+}

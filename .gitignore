@@ -1,0 +1,29 @@
+# folders and files
+/vendor
+/bin
+/runtime
+/luya
+composer.phar
+.DS_Store
+.env
+/docker/.env
+/.env
+
+# project config
+/configs/env-local-db.php
+/configs/env.php
+
+# SASS & GULP
+/resources/.sass-cache
+/resources/local/
+
+#IDE: netbeans
+/nbproject
+
+#IDE: PHPStorm
+.idea/
+
+#IDE: eclipse
+.buildpath
+.project
+.settings
