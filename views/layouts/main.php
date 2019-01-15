@@ -1,12 +1,9 @@
 <?php
 use app\assets\ResourcesAsset;
-use luya\helpers\Url;
-use luya\cms\widgets\LangSwitcher;
 
 ResourcesAsset::register($this);
 
 /* @var $this luya\web\View */
-/* @var $content string */
 
 $this->beginPage();
 ?>
