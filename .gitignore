@@ -13,9 +13,9 @@ composer.phar
 /configs/env-local-db.php
 /configs/env.php
 
-# SASS & GULP
-/resources/.sass-cache
-/resources/local/
+# Unglue
+/resources/dist/main.css
+/resources/dist/main.js
 
 #IDE: netbeans
 /nbproject

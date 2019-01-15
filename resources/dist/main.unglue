@@ -1,0 +1,12 @@
+{
+    "css": [
+        "../src/scss/main.scss"
+    ],
+    "js": [
+        "../src/js/main.js"
+    ],
+    "options": {
+        "compress": false,
+        "maps": true
+    }
+}

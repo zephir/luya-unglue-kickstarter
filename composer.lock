@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "48a37f795f787637b2b595c56ea7c8fe",
+    "content-hash": "2283518d93d8d5eda0bde0f7c5e73762",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -1016,11 +1016,6 @@
             "require": {
                 "bower-asset/jquery": ">=1.7"
             },
-            "require-dev": {
-                "bower-asset/jasmine-ajax": "~1.3.1",
-                "bower-asset/jasmine-jquery": "~1.5.2",
-                "bower-asset/jquery": "~1.7"
-            },
             "type": "bower-asset-library",
             "extra": {
                 "bower-asset-main": "dist/typeahead.bundle.js"
@@ -1267,11 +1262,35 @@
                 "yii2"
             ],
             "time": "2018-12-08T10:07:49+00:00"
+        },
+        {
+            "name": "zephir/frontend-resources",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zephir/frontend-resources.git",
+                "reference": "08df4f635ad24436412a494b417b8ac27f83efc0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zephir/frontend-resources/zipball/08df4f635ad24436412a494b417b8ac27f83efc0",
+                "reference": "08df4f635ad24436412a494b417b8ac27f83efc0",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Zephir every day frontend resources.",
+            "time": "2019-01-15T10:03:39+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "zephir/frontend-resources": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
