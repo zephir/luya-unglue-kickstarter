@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://avatars2.githubusercontent.com/u/6582596?s=100&v=4" alt="LUYA Logo"/>
+  <img src="https://avatars2.githubusercontent.com/u/6582596?s=100&amp;v=4" alt="LUYA Logo"/>
 </p>
 
 # Zephir Unglue Frontend Workflow
