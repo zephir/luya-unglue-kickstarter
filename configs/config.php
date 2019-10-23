@@ -20,6 +20,10 @@ $config = new Config('myproject', dirname(__DIR__), [
         ],
     ],
     'components' => [
+        'db' => [
+            'class' => 'yii\db\Connection',
+            'charset' => 'utf8',
+        ],
         'composition' => [
             'hidden' => true, // no languages in your url (most case for pages which are not multi lingual)
             'default' => ['langShortCode' => 'en'], // the default language for the composition should match your default language shortCode in the language table.
