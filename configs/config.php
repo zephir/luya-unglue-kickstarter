@@ -40,23 +40,12 @@ $config->callback(function() {
     define('YII_ENV', 'local');
 })->env(Config::ENV_LOCAL);
 
-// database config for 
-$config->component('db', [
-    'dsn' => 'mysql:host=localhost;dbname=DB_NAME',
-    // 'dsn' => 'mysql:host=localhost;dbname=DB_NAME;unix_socket=/Applications/MAMP/tmp/mysql/mysql.sock', // OSX MAMP
-    // 'dsn' => 'mysql:host=localhost;dbname=DB_NAME;unix_socket=/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock', // OSX XAMPP
-    'username' => '',
-    'password' => '',
-])->env(Config::ENV_LOCAL);
-
-/*
 // docker mysql config
 $config->component('db', [
-    'dsn' => 'mysql:host=luya_db;dbname=luya_unglue_kickstarter',
+    'dsn' => 'mysql:host=luya_db;dbname=luya_unglue',
     'username' => 'luya',
-    'password' => 'CHANGE_ME',
+    'password' => 'luya',
 ])->env(Config::ENV_LOCAL);
-*/
 
 $config->component('db', [
     'dsn' => 'mysql:host=localhost;dbname=DB_NAME',
