@@ -6,6 +6,10 @@ $config = new Config('myproject', dirname(__DIR__), [
     'siteTitle' => 'My Project',
     'defaultRoute' => 'cms',
     'basePath' => dirname(__DIR__),
+    'aliases' => [
+        '@bower' => '@vendor/bower-asset',
+        '@npm'   => '@vendor/npm-asset',
+    ],
     'modules' => [
         'admin' => [
             'class' => 'luya\admin\Module',
@@ -30,6 +34,11 @@ $config = new Config('myproject', dirname(__DIR__), [
         ],
     ],
 ]);
+
+$config->callback(function() {
+    define('YII_DEBUG', true);
+    define('YII_ENV', 'local');
+})->env(Config::ENV_LOCAL);
 
 // database config for 
 $config->component('db', [
