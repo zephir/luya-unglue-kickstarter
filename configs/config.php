@@ -14,6 +14,7 @@ $config = new Config('myproject', dirname(__DIR__), [
         'admin' => [
             'class' => 'luya\admin\Module',
             'interfaceLanguage' => 'en',
+            'autoBootstrapQueue' => true, // Enables the fake cronjob by default, read more about queue/scheduler: https://luya.io/guide/app-queue
         ],
         'cms' => [
             'class' => 'luya\cms\frontend\Module',
