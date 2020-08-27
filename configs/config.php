@@ -36,40 +36,49 @@ $config = new Config('myproject', dirname(__DIR__), [
     ],
 ]);
 
-$config->callback(function() {
-    define('YII_DEBUG', true);
-    define('YII_ENV', 'local');
-})->env(Config::ENV_LOCAL);
+/************ LOCAL ************/
 
-// docker mysql config
-$config->component('db', [
-    'dsn' => 'mysql:host=luya_db;dbname=luya_unglue',
-    'username' => 'luya',
-    'password' => 'luya',
-])->env(Config::ENV_LOCAL);
+$config->env(Config::ENV_LOCAL, function(Config $config) {
+    $config->callback(function() {
+        define('YII_DEBUG', true);
+        define('YII_ENV', 'local');
+    });
 
-$config->component('db', [
-    'dsn' => 'mysql:host=localhost;dbname=DB_NAME',
-    'username' => '',
-    'password' => '',
-    'enableSchemaCache' => true,
-    'schemaCacheDuration' => 0,
-])->env(Config::ENV_PROD);
+    // docker mysql config
+    $config->component('db', [
+        'dsn' => 'mysql:host=luya_db;dbname=luya_unglue',
+        'username' => 'luya',
+        'password' => 'luya',
+    ]);
+    
+    // debug and gii on local env
+    $config->module('debug', [
+        'class' => 'yii\debug\Module',
+        'allowedIPs' => ['*'],
+    ]);
+    $config->module('gii', [
+        'class' => 'yii\gii\Module',
+        'allowedIPs' => ['*'],
+    ]);
 
-$config->component('cache', [
-    'class' => 'yii\caching\FileCache'
-])->env(Config::ENV_PROD);
+    $config->bootstrap(['debug', 'gii']);
+});
 
-// debug and gii on local env
-$config->module('debug', [
-    'class' => 'yii\debug\Module',
-    'allowedIPs' => ['*'],
-])->env(Config::ENV_LOCAL);
-$config->module('gii', [
-    'class' => 'yii\gii\Module',
-    'allowedIPs' => ['*'],
-])->env(Config::ENV_LOCAL);
+/************ PROD ************/
 
-$config->bootstrap(['debug', 'gii'])->env(Config::ENV_LOCAL);
+$config->env(Config::ENV_PROD, function(Config $config) {
+    $config->component('db', [
+        'dsn' => 'mysql:host=localhost;dbname=DB_NAME',
+        'username' => '',
+        'password' => '',
+        'enableSchemaCache' => true,
+        'schemaCacheDuration' => 0,
+    ]);
+
+    $config->component('cache', [
+        'class' => 'yii\caching\FileCache'
+    ]);
+});
+
 
 return $config;
