@@ -25,3 +25,7 @@ services:
       - "8080:80"
     volumes:
       - ./:/app
+  unglue:
+    image: unglue/server
+    ports:
+      - "3000:3000"
