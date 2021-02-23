@@ -18,7 +18,7 @@ $config = new Config('myproject', dirname(__DIR__), [
         ],
         'cms' => [
             'class' => 'luya\cms\frontend\Module',
-            'contentCompression' => true, 
+            'contentCompression' => true,
         ],
         'cmsadmin' => [
             'class' => 'luya\cms\admin\Module',
@@ -38,8 +38,8 @@ $config = new Config('myproject', dirname(__DIR__), [
 
 /************ LOCAL ************/
 
-$config->env(Config::ENV_LOCAL, function(Config $config) {
-    $config->callback(function() {
+$config->env(Config::ENV_LOCAL, function (Config $config) {
+    $config->callback(function () {
         define('YII_DEBUG', true);
         define('YII_ENV', 'local');
     });
@@ -66,7 +66,7 @@ $config->env(Config::ENV_LOCAL, function(Config $config) {
 
 /************ PROD ************/
 
-$config->env(Config::ENV_PROD, function(Config $config) {
+$config->env(Config::ENV_PROD, function (Config $config) {
     $config->component('db', [
         'dsn' => 'mysql:host=localhost;dbname=DB_NAME',
         'username' => '',

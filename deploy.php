@@ -13,5 +13,4 @@ host('SSHOST')
 task('unglue:compile', './vendor/bin/unglue compile');
 after('luya:commands', 'unglue:compile');
 
-
 set('repository', 'https://USER:PASSWORD@github.com/VENDOR/REPO.git');
