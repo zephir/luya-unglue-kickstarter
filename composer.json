@@ -11,7 +11,7 @@
         "zephir/frontend-resources": "^1.0"
     },
     "require-dev": {
-        "luyadev/luya-deployer" : "^1.0",
+        "luyadev/luya-deployer" : "^2.0",
         "yiisoft/yii2-gii" : "^2.0",
         "yiisoft/yii2-debug" : "^2.0"
     },
