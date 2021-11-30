@@ -1,14 +1,10 @@
 version: '3'
 services:
   luya_composer:
-    image: composer:latest
+    image: composer
     volumes:
       - ./:/app
     command: composer install
-  luya_php:
-    image: luyadev/luya-docker-php
-    volumes:
-      - ./:/app
   luya_db:
     image: mysql:5.7
     command:
@@ -19,10 +15,10 @@ services:
       MYSQL_DATABASE: luya_unglue
       MYSQL_USER: luya
       MYSQL_PASSWORD: luya
-  luya_web:
-    image: luyadev/luya-docker-nginx
     ports:
-      - "8080:80"
+      - "3306:3306"
+  luya_web:
+    image: luyadev/luya-docker:nginx-fpm-php74
     volumes:
       - ./:/app
   unglue:
