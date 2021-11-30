@@ -10,7 +10,6 @@ host('SSHOST')
     ->user('SSHUSER')
     ->set('deploy_path', '~/httpdocs');
 
-task('unglue:compile', './vendor/bin/unglue compile');
-after('luya:commands', 'unglue:compile');
+after('luya:commands', 'unglue');
 
 set('repository', 'https://USER:PASSWORD@github.com/VENDOR/REPO.git');
