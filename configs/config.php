@@ -78,6 +78,10 @@ $config->env(Config::ENV_PROD, function (Config $config) {
     $config->component('cache', [
         'class' => 'yii\caching\FileCache'
     ]);
+    
+    $config->application([
+        'ensureSecureConnection' => true, // https://luya.io/guide/app-security
+    ]);
 });
 
 
