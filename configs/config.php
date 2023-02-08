@@ -51,6 +51,11 @@ $config->env(Config::ENV_LOCAL, function (Config $config) {
         'password' => 'luya',
     ]);
     
+    $config->component('assetManager', [
+        'class' => 'luya\web\AssetManager',
+        'linkAssets' => true
+    ]);
+    
     // debug and gii on local env
     $config->module('debug', [
         'class' => 'yii\debug\Module',
