@@ -10,13 +10,13 @@
         "zephir/frontend-resources": "^1.0"
     },
     "require-dev": {
-        "luyadev/luya-deployer" : "^2.0",
+        "luyadev/luya-deployer" : "^3.0",
         "yiisoft/yii2-gii" : "^2.0",
         "yiisoft/yii2-debug" : "^2.0"
     },
     "config": {
-        "fxp-asset": {
-            "enabled": false
+        "platform": {
+            "php": "8.2"
         },
         "allow-plugins": {
             "yiisoft/yii2-composer": true,

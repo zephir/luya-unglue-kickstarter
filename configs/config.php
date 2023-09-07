@@ -46,7 +46,7 @@ $config->env(Config::ENV_LOCAL, function (Config $config) {
 
     // docker mysql config
     $config->component('db', [
-        'dsn' => 'mysql:host=luya_db;dbname=luya_unglue',
+        'dsn' => 'mysql:host=luya_db;dbname=luya',
         'username' => 'luya',
         'password' => 'luya',
     ]);
