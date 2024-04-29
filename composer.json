@@ -2,17 +2,17 @@
     "name": "zephir/luya-unglue-kickstarter",
     "description": "The Zephir LUYA Template with Unglue Frontend-Workflow.",
     "type": "luya-kickstarter",
-    "license":"MIT",
+    "license": "MIT",
     "require": {
-        "luyadev/luya-module-admin" : "^4.0",
-        "luyadev/luya-module-cms" : "^4.0",
-        "unglue/client" : "^1.0",
+        "luyadev/luya-module-admin": "^5.0",
+        "luyadev/luya-module-cms": "^5.0",
+        "unglue/client": "^1.0",
         "zephir/frontend-resources": "^1.0"
     },
     "require-dev": {
-        "luyadev/luya-deployer" : "^3.0",
-        "yiisoft/yii2-gii" : "^2.0",
-        "yiisoft/yii2-debug" : "^2.0"
+        "luyadev/luya-deployer": "^3.0",
+        "yiisoft/yii2-gii": "^2.0",
+        "yiisoft/yii2-debug": "^2.0"
     },
     "config": {
         "platform": {
